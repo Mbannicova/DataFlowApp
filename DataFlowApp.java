@@ -79,9 +79,9 @@ class DataTransformer {
 	
 	static  short doubleToShort( double value ) {
 	    if ( value >= -32768 & value <= 32767) {
-			      // ïðåîáðàçîâûâàåì â Short, ÷òîá ïîëó÷èòü öåëóþ ÷àñòü ÷èñëà
+			      // Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ñ‹Ð²Ð°ÐµÐ¼ Ð² Short, Ñ‡Ñ‚Ð¾Ð± Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ñ†ÐµÐ»ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð°
 			      short intPart = (short) value;
-			      // ïîëó÷àåì äðîáíóþ ÷àñòü
+			      // Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð´Ñ€Ð¾Ð±Ð½ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ
 			      double fracPart = value - intPart;
 			      if (fracPart >= 0.5) {
 			        intPart ++;
