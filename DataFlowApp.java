@@ -15,6 +15,9 @@ public class DataFlowApp {
 		Typetester.printType(f);
 		int j = DataTransformer.shortToInteger(f);
 		Typetester.printType(j);
+		short h = DataTransformer.doubleToShort(d);
+		Typetester.printType(h);
+		
 		
 		
 		
@@ -73,6 +76,23 @@ class DataTransformer {
 		return (int)value;
 		
 	}
+	
+	static  short doubleToShort( double value ) {
+	    if ( value >= -32768 & value <= 32767) {
+			      // преобразовываем в Short, чтоб получить целую часть числа
+			      short intPart = (short) value;
+			      // получаем дробную часть
+			      double fracPart = value - intPart;
+			      if (fracPart >= 0.5) {
+			        intPart ++;
+			      }
+			      return(intPart);
+			    }
+			    else {
+			      System.out.println("WARNING! The value \" + value + \" overflows \"integer\" range. DATA will was lost!");
+			      return(0);
+			    }
+			  }
 	
 	}
 
